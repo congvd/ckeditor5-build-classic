@@ -31,6 +31,7 @@ import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
+import Comments from '@ckeditor/ckeditor5-comments/src/comments';
 
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -62,7 +63,8 @@ ClassicEditor.builtinPlugins = [
 	RemoveFormat,
 	Indent,
 	IndentBlock,
-	SimpleUploadAdapter
+	SimpleUploadAdapter,
+	Comments
 ];
 
 // Editor configuration.
@@ -77,7 +79,7 @@ ClassicEditor.defaultConfig = {
 		    '|', 'heading', 'fontFamily', 'fontSize', 
 		    '|', 'link', 'insertTable', 'imageUpload', 'mediaEmbed',
             '|', 'removeFormat',
-            '|', 'blockQuote'
+            '|', 'blockQuote', 'comment'
 		]
 	},
     // https://ckeditor.com/docs/ckeditor5/latest/features/image.html
